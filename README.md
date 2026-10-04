@@ -1,36 +1,36 @@
 # AlphaGPT
 
-OpenRouter-চালিত একটি browser-based AI chat interface। এখান থেকে বিভিন্ন AI model বেছে নিয়ে chat করা, prompt explore করা, উত্তর save করা এবং image attach করা যায়।
+AlphaGPT is a browser-based AI chat interface powered by OpenRouter. Choose from available AI models, explore prompt ideas, save messages, and attach images to your chats.
 
-## চালানোর নিয়ম
+## Getting Started
 
-প্রয়োজন: Node.js এবং npm।
+You will need [Node.js](https://nodejs.org/) and npm.
 
 ```bash
 npm ci
 npm run dev
 ```
 
-Terminal-এ Vite যে local URL দেখাবে, সেটি browser-এ খুলুন।
+Open the local URL printed by Vite in your browser.
 
-## OpenRouter API key
+## OpenRouter API Key
 
-Chat-এ live উত্তর পেতে OpenRouter API key প্রয়োজন। [OpenRouter-এর key পেজ](https://openrouter.ai/keys) থেকে নিজের key তৈরি করে অ্যাপের উপরের key control বা Settings-এ দিন।
+To get live AI responses, create an API key on the [OpenRouter keys page](https://openrouter.ai/keys) and enter it in the app's top bar or Settings.
 
-এই অ্যাপের backend নেই। Browser সরাসরি OpenRouter-এ request পাঠায় এবং key-টি ওই browser-এর `localStorage`-এ রাখা হয়। তাই নিজের key শুধু নিজের trusted browser-এ ব্যবহার করুন; public বা shared computer-এ key সংরক্ষণ করবেন না। কোনো API key source code-এ বা GitHub-এ commit করবেন না।
+This app has no backend. Your browser sends requests directly to OpenRouter and stores the key in that browser's `localStorage`. Use your own key only in a browser you trust, and do not save it on public or shared computers. Never add API keys to source code or commit them to GitHub.
 
-## Build
+## Production Build
 
 ```bash
 npm run build
 npm run preview
 ```
 
-Production build `dist/` directory-তে তৈরি হবে। Static hosting-এ publish করতে `npm run build` চালিয়ে `dist/` deploy করুন।
+The production files are generated in `dist/`. To deploy on a static hosting provider, use `npm run build` as the build command and `dist` as the output directory.
 
-## প্রযুক্তি
+## Built With
 
-- React ও TypeScript
+- React and TypeScript
 - Vite
 - Tailwind CSS
 - OpenRouter Chat Completions API

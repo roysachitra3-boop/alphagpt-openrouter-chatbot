@@ -28,6 +28,24 @@ npm run preview
 
 The production files are generated in `dist/`. To deploy on a static hosting provider, use `npm run build` as the build command and `dist` as the output directory.
 
+## Windows Desktop App
+
+Run the desktop app in development mode with:
+
+```bash
+npm run desktop:dev
+```
+
+Create a Windows installer (`AlphaGPT-Setup-0.0.0.exe`) on a Windows machine with:
+
+```bash
+npm run desktop:build
+```
+
+The installer is generated in `release/`. The installed app still requires your own OpenRouter API key for live responses.
+
+Every push to `main` also starts the **Build Windows Installer** workflow on GitHub Actions. To get its installer, open the repository's **Actions** tab, select the latest successful run, and download the `AlphaGPT-Windows-Installer` artifact.
+
 ## Built With
 
 - React and TypeScript
